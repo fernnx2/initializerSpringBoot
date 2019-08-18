@@ -10,10 +10,14 @@ public interface UserService {
 	
 	public List<User> findAll();
 	
-	public User findById(Long id);
+	public User findById(int id);
 	
 	public void eliminar(User user);
 	
 	public User update(User user);
+
+	public List<User> findByRol(int id);
+
+	public List<User> searchByName(String name);
 	
 }

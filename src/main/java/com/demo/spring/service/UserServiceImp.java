@@ -41,8 +41,18 @@ public class UserServiceImp implements UserService {
 	}
 
 	@Override
-	public User findById(Long id) {
+	public User findById(int id) {
 		return this.userRepository.getOne(id);
+	}
+
+	@Override
+	public List<User> findByRol(int id) {
+		return this.userRepository.findByRol(id);
+	}
+
+	@Override
+	public List<User> searchByName(String name) {
+		return this.userRepository.findByNameWhith(name);
 	}
 	
 	
